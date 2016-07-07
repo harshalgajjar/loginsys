@@ -28,4 +28,4 @@ In order to edit what is shown after logging in you need to:
 4. Additionally, one can edit the lines 25 to 28.
 
 #about developer
-Hi there! Thanks for reading this. I'm currently an Electrical Maintenance student. I'm learning PHP right now. This repository was a good exercise. Any mistakes/suggestions/comments would be appreciated! Thanks in advance! Follow me on twitter: @harshalgajjar
+Hi there! Thanks for reading this. I'm currently an Electrical Maintenance student and am learning PHP right now. This is my first repository on GitHub. Any mistakes/suggestions/comments would be appreciated! Thanks in advance! Follow me on twitter: @harshalgajjar
