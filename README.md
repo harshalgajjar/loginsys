@@ -2,7 +2,7 @@
 A basic user login framework made using PHP
 
 #requirements
-a MySQL database.
+a MySQL database
 
 #setup
 1. Download all the files (login.php, admin.php, logout.php, connect.php, config.php)
