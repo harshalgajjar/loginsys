@@ -18,7 +18,7 @@ a MySQL database
 7. Now open the file "config.php" by typing www.yourdomain.com/userspace/config.php (remember to replace "userspace" with the name of the folder you had created in public_html) in your browser's address bar, this will create a table named users to store all your usernames and passwords. 
 8. Please note the new user's username and password shown in your browser window. You can of course delete the user if you want.  
   
-All set!  
+All set! :)  
 Login page: www.yourdomain.com/userspace/login.php (remember to replace "userspace" with the name of the folder you had created in public_html)
 
 In order to edit what is shown after logging in you need to:  
