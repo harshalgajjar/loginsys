@@ -15,11 +15,11 @@ a MySQL database
    d. Replace "name" (line 5) with yout MySQL database name  
 5. Repeat step 4, editing "connect.php" this time.
 6. Upload the files (to a new folder in public_html, say 'userspace') by using your FTP account or by visiting your hosting provider's dashboard (or move them to your lamp/wamp/xampp folder)
-7. Now open the file "config.php" by typing www.yourdomain.com/userspace/config.php (remember to replace userspace with the name of the folder you had created in public_html) in your browser's address bar, this will create a table named users to store all your usernames and passwords. 
+7. Now open the file "config.php" by typing www.yourdomain.com/userspace/config.php (remember to replace "userspace" with the name of the folder you had created in public_html) in your browser's address bar, this will create a table named users to store all your usernames and passwords. 
 8. Please note the new user's username and password shown in your browser window. You can of course delete the user if you want.  
   
 All set!  
-Login page: www.yourdomain.com/userspace/login.php (remember to replace userspace with the name of the folder you had created in public_html)
+Login page: www.yourdomain.com/userspace/login.php (remember to replace "userspace" with the name of the folder you had created in public_html)
 
 In order to edit what is shown after logging in you need to:  
 1. Open "admin.php" in your text editor  
