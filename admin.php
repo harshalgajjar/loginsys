@@ -10,20 +10,22 @@
 ?>
     <div id="login_success">
         
-        <!-- INCLUDE ALL THE CONTENT YOU WANT TO SHOW IN THIS DIV #login_success -->
+        <!-- EDIT THE LINES BELOW, content below is shown to users who have logged in -->
         <h1>Welcome user, <?php echo $_SESSION['username']?></h1>
         Login successful
+        <!-- STOP EDITING -->
         
-        <a href="logout.php">Logout</a>
+    <a href="logout.php">Logout</a>
     </div>
 <?php
 }else{
 ?>
     <div id="login_failed">
         
-        <!-- INCLUDE ALL THE CONTENT YOU WANT TO SHOW IF SOMEONE LANDS HERE WITHOUT BEING LOGGED IN, IN THIS DIV #login_failed -->
+        <!-- EDIT THE LINES BELOW, content below is shown to users accidently land to this page without logging in -->
         <h1>Authentication failed</h1>
         Please click <a href="login.php">here</a> to login
+        <!-- STOP EDITING -->
         
     </div>
 <?php
