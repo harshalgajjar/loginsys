@@ -25,7 +25,7 @@ In order to edit what is shown after logging in you need to:
 1. Open "admin.php" in your text editor  
 2. Search (line 11) for the division with id="login_success" (use control+F:"login_success")  
 3. Add your html code in between the two comments.  
-4. Additionally, one can edit the lines 25 to 28.
+4. Additionally, one can edit the lines 25 to 28. 
 
 #about developer
 Hi there! Thanks for reading this. I'm currently an Electrical Maintenance student and am learning PHP right now. This is my first repository on GitHub. Any mistakes/suggestions/comments would be appreciated! Thanks in advance! Follow me on twitter: @harshalgajjar
