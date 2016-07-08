@@ -23,6 +23,7 @@
                 $_SESSION['login'] = "success"; //using session variables to remember that user has logged in
                 $_SESSION['username'] = $username; //storing username for further use (if any)
                 header('Location:admin.php'); //redirecting user to admin page
+                mysqli_close($handle); //closing MySQL connection  
             } else{
                 //wrong credentials
                 $error="Wrong username and/or password"; //storing error in error variable to output on screen
