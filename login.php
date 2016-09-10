@@ -2,13 +2,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>Login</title>
+    <title>Welcome</title>
     <meta type="robots" content="noindex">
 </head>
 <body>
     
 <?php
-    $error="";
+
+//error_reporting(0);
+
+    $error_login=$error_signup="";
     if(isset($_POST['login_submit'])){ //checking if 'login' button was clicked
         $username=$_POST['username']; //storing entered data
         $password=$_POST['password']; //storing entered data
@@ -26,21 +29,63 @@
                 mysqli_close($handle); //closing MySQL connection  
             } else{
                 //wrong credentials
-                $error="Wrong username and/or password"; //storing error in error variable to output on screen
+                $error_login="Wrong username and/or password"; //storing error in error variable to output on screen
             }
             
-        }
+    } elseif(isset($_POST['signup_submit'])){
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        
+            include_once "connect.php";
+            
+            if(!empty($username) && !empty($password)){
+                $sql="SELECT * FROM users WHERE username='$username'";
+                $request=mysqli_query($handle,$sql);
+                
+                if(mysqli_num_rows($request) > 0){
+                    $error_signup="Username already taken";
+                } else{
+                    $sql="INSERT INTO users (username,password) VALUES ('$username','$password')";
+                    if(mysqli_query($handle,$sql)){
+                        $error_signup="User created";
+                    } else{
+                        $error_signup="User creation failed";
+                    }
+                }
+            } else{
+                $error_signup="Please enter valid credentials";
+            }
+        
+    }
     
 ?>
+    <div id="login-form">
+        Log in
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
     
-    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+            Username:<br /><input type="text" name="username"/><br />
+            Password:<br /><input type="password" name="password"/><br />
+            <input type="submit" name="login_submit" value="Login"/><br />
+            <?php echo $error_login; // showing error (if any)?>
     
-    Username:<input type="text" name="username" /><br />
-    Password:<input type="password" name="password" /><br />
-    <input type="submit" name="login_submit" value="Login"/><br />
-    <?php echo $error; // showing error (if any)?>
+        </form>
+    </div>
     
-    </form>
+    <hr />
+    
+    <div id="signup-form">
+        Sign up
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+            
+            Username:<br /><input type="text" name="username"/><br />
+            Password:<br /><input type="password" name="password"/><br />
+            <input type="submit" name="signup_submit" value="Signup"/><br />
+            <?php echo $error_signup; // showing error (if any)?>
+            
+        </form>
+    </div>
+    
+    
 
 </body>
 </html>
