@@ -19,7 +19,7 @@ a MySQL database
 8. Please note the new user's username and password shown in your browser window. You can of course delete the user if you want.  
   
 All set! :)  
-Login page: www.yourdomain.com/userspace/login.php (remember to replace "userspace" with the name of the folder you had created in public_html)
+Login/Signup page: www.yourdomain.com/userspace/login.php (remember to replace "userspace" with the name of the folder you had created in public_html)
 
 In order to edit what is shown after logging in you need to:  
 1. Open "admin.php" in your text editor  
