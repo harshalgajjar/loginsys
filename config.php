@@ -28,6 +28,6 @@ if(!mysqli_query($handle,$sql)){ //checking user
     echo "A new user has been created: username='loginsys' and password='admin' <br /><br />";
     echo "All went well! Congrats, the setup is now complete!";
 }
-
+ 
 mysqli_close($handle); //closing MySQL connection
 ?>
